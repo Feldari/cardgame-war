@@ -114,7 +114,7 @@ def fight(hand1, hand2):
     player1loot = []
     player2loot = []
 
-    while True:
+    while hand1 != [] and hand2 != []:
 
         while hand1 != [] and hand2 != []:
             
@@ -147,13 +147,16 @@ def fight(hand1, hand2):
                 hand2.pop(0)
 
         '''    
+        # uncomment below lines to see how cards move during shuffling process
+        # see below comment block too!
         print ('-------------------Before Shuffle-------------------')
         print ('\#cards', len(hand1), 'hand1', hand1)
         print ('\#cards', len(hand2), 'hand2', hand2)
         print ()
-        print ('p1cards', len(player1loot), 'p1loot', player1loot)
-        print ('p2cards', len(player2loot), 'p2loot', player2loot)
+        print ('\#cards', len(player1loot), 'p1loot', player1loot)
+        print ('\#cards', len(player2loot), 'p2loot', player2loot)
         print ()
+        # uncomment above lines to see how cards move during shuffling process
         ''' 
 
         # ??????Why does this blank the list used for the argument???
@@ -161,19 +164,41 @@ def fight(hand1, hand2):
             print('Shuffling player 1\'s hand')
             hand1 = shuffle(player1loot)
         else:
+            pass
+
+        if hand2 == []:
             print('Shuffling player 2\'s hand')
             hand2 = shuffle(player2loot)
+        else:
+            pass
 
         
         '''
+        # uncomment below lines to see how cards move during shuffling process
+        # see above comment block too!
         print ('-------------------After Shuffle--------------------')
-        print ('p1hand', len(hand1), 'p1hand', hand1)
-        print ('p2hand', len(hand2), 'p2hand', hand2)
+        print ('\#cards', len(hand1), 'hand1', hand1)
+        print ('\#cards', len(hand2), 'hand2', hand2)
         print ()
-        print ('p1cards', len(player1loot), 'p1loot', player1loot)
-        print ('p2cards', len(player2loot), 'p2loot', player2loot)
+        print ('\#cards', len(player1loot), 'p1loot', player1loot)
+        print ('\#cards', len(player2loot), 'p2loot', player2loot)
         print ()
+        # uncomment above lines to see how cards move during shuffling process
         '''
+
+
+        # check to see if player hand is still empty after shuffle
+        # if it is other player wins!!
+
+        if hand1 == []:
+            print ('Player 2 Wins!!')
+        else:
+            pass
+        
+        if hand2 == []:
+            print ('Player 1 Wins!!')
+        else:
+            pass
 
 
 def war():
