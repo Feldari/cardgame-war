@@ -146,14 +146,15 @@ def fight(hand1, hand2):
                 hand1.pop(0)
                 hand2.pop(0)
 
-        
+        '''    
         print ('-------------------Before Shuffle-------------------')
-        print ('p1hand', len(hand1), 'p1hand', hand1)
-        print ('p2hand', len(hand2), 'p2hand', hand2)
+        print ('\#cards', len(hand1), 'hand1', hand1)
+        print ('\#cards', len(hand2), 'hand2', hand2)
         print ()
         print ('p1cards', len(player1loot), 'p1loot', player1loot)
         print ('p2cards', len(player2loot), 'p2loot', player2loot)
         print ()
+        ''' 
 
         # ??????Why does this blank the list used for the argument???
         if hand1 == []:
@@ -163,7 +164,8 @@ def fight(hand1, hand2):
             print('Shuffling player 2\'s hand')
             hand2 = shuffle(player2loot)
 
-
+        
+        '''
         print ('-------------------After Shuffle--------------------')
         print ('p1hand', len(hand1), 'p1hand', hand1)
         print ('p2hand', len(hand2), 'p2hand', hand2)
@@ -171,6 +173,7 @@ def fight(hand1, hand2):
         print ('p1cards', len(player1loot), 'p1loot', player1loot)
         print ('p2cards', len(player2loot), 'p2loot', player2loot)
         print ()
+        '''
 
 
 def war():
