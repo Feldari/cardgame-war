@@ -126,7 +126,7 @@ def fight(hand1, hand2):
             # #################################
             # #######TO DO#####################
             if hand1[0][0] == hand2[0][0]:
-                print('WAR!')
+                # war(hand1, hand2, player1loot, player2loot)
                 hand1.pop(0)
                 hand2.pop(0)
             # #####COMPLETE WAR FUNCTION ABOVE#
@@ -201,11 +201,17 @@ def fight(hand1, hand2):
             pass
 
 
-def war():
+def war(hand1, hand2, player1loot, player2loot):
     '''
     If two cards match in the war function this one resolves the tie.
     '''
-    pass
+    print ('WAR!!!')
+    print ('P1 card: ', hand1[0][0], 'P2 card: ', hand2[0][0])
+    print ('Cards on the line: ')
+    print ('          P1           P2')
+    for card in range(3):
+        print ('         ', hand1[card][0], hand2[card][0]
+    
 
 
 if __name__ == '__main__':
